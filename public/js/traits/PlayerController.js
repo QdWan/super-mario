@@ -1,13 +1,13 @@
 import {Trait} from '../Entity.js';
 import Stomper from '../traits/Stomper.js';
 import {Vec2} from '../math.js';
+import Stomper from '../traits/Stomper.js';
 
 export default class PlayerController extends Trait {
     constructor() {
         super('playerController');
         this.checkpoint = new Vec2(0, 0);
         this.player = null;
-        this.score = 0;
         this.time = 300;
     }
 

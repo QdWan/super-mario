@@ -30,9 +30,8 @@ async function main(canvas) {
     const playerEnv = createPlayerEnv(mario);
     level.entities.add(playerEnv);
 
-
     level.comp.layers.push(createCollisionLayer(level));
-    level.comp.layers.push(createDashboardLayer(font, playerEnv));
+    level.comp.layers.push(createDashboardLayer(font, playerEnv, mario));
 
     const input = setupKeyboard(mario);
     input.listenTo(window);

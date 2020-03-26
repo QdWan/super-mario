@@ -9,11 +9,11 @@ export default class EventBuffer {
     }
 
     process(name, callback) {
-        this.events.forEach(event => {
+        for (const event of this.events) {
             if (event.name === name) {
                 callback(...event.args);
             }
-        });
+        }
     }
 
     clear() {
